@@ -9,7 +9,7 @@ const RegisterForm = () => {
       <input type="email" required placeholder="Email" className="input input-bordered input-success w-full" />
       <input type="password"  required placeholder="Password" className="input input-bordered input-success w-full" />
       <button className="btn btn-success text-white">Register</button>
-      <p>Already have an account? <Link className="font-bold border-b-2 border-solid border-blue-500 hover:text-blue-600" href={'/'}>Login</Link></p>
+      <p>Already have an account? <Link className="link link-info hover:font-bold" href={'/'}>Login</Link></p>
     </form>
   )
 }
