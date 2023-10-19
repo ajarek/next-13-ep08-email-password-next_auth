@@ -10,10 +10,10 @@ const UserInfo = () => {
     <div className='card w-96 bg-base-100 shadow-xl'>
       <div className='card-body'>
         <h2 className='card-title'>
-          {params.user.split('%')[0].toUpperCase()}
+          lol
         </h2>
         <p>
-          email: <span>{decodeURIComponent(params.user)}</span>
+          email: <span>lol@wp.pl</span>
         </p>
 
         <div className='card-actions justify-end'>

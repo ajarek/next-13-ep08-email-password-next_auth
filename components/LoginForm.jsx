@@ -1,5 +1,5 @@
 "use client";
-
+import { signIn } from 'next-auth/react'
 import React from 'react'
 import Link from "next/link";
 import { useRouter } from 'next/navigation'
@@ -9,9 +9,13 @@ const LoginForm = () => {
   const handleSubmit=(e)=>{
     e.preventDefault()
     
-    const  email=e.target[0].value
-     
-    router.push( `/dashboard/${email}` )  
+    const email = e.target[0].value;
+    const password = e.target[1].value;
+
+    signIn("credentials", {
+      email,
+      password,
+    });
   }
   return (
     <form onSubmit={handleSubmit} className='w-96 max-sm:w-80 flex flex-col p-8 max-sm:p-2  gap-4 shadow-2xl  border-t-4 border-green-400'>
