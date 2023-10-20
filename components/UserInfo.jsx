@@ -1,32 +1,38 @@
 'use client'
 
-import React from 'react'
-import { useRouter, useParams } from 'next/navigation'
-const UserInfo = () => {
-  const params = useParams()
+import { signOut } from 'next-auth/react'
+import { useSession } from 'next-auth/react'
+import { useRouter } from 'next/navigation'
+import Spinner from './Spinner'
+export default function UserInfo() {
+  const session = useSession()
   const router = useRouter()
 
-  return (
-    <div className='card w-96 bg-base-100 shadow-xl'>
-      <div className='card-body'>
-        <h2 className='card-title'>
-          lol
-        </h2>
-        <p>
-          email: <span>lol@wp.pl</span>
-        </p>
+  const logOut = () => {
+    signOut
+    router.replace('/')
+  }
+  if (session.status === 'loading') {
+    return <Spinner />
+  }
 
-        <div className='card-actions justify-end'>
-          <button
-            onClick={() => router.push('/')}
-            className='btn btn-error'
-          >
-            Log Out
-          </button>
+  return (
+    <div className='grid place-items-center h-screen'>
+      <div className='shadow-lg p-8 bg-zinc-300/10 flex flex-col gap-2 my-6'>
+        <div>
+          Name: <span className='font-bold'>{session?.data?.user.name}</span>
         </div>
+        <div>
+          Email: <span className='font-bold'>{session?.data?.user.email}</span>
+        </div>
+        <button
+          onClick={logOut}
+          className='bg-red-500 text-white font-bold px-6 py-2 mt-3'
+        >
+          Log Out
+        </button>
       </div>
     </div>
   )
+  // }
 }
-
-export default UserInfo
