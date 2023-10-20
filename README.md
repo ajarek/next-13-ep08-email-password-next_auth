@@ -2,7 +2,7 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 <img width="150" alt="Zrzut ekranu 2023-10-20 214947" src="https://github.com/ajarek/next-13-ep08-email-password-next_auth/assets/61388692/5bd66605-2e28-471d-a52d-338ab42e4034">
 <img width="150" alt="Zrzut ekranu 2023-10-20 214903" src="https://github.com/ajarek/next-13-ep08-email-password-next_auth/assets/61388692/637c28db-b792-469e-8fc6-ad21144dbf12">
-<img width="249" alt="Zrzut ekranu 2023-10-20 215020" src="https://github.com/ajarek/next-13-ep08-email-password-next_auth/assets/61388692/532956f2-e4b1-4998-b6ab-4e94374c369a">
+<img width="150" alt="Zrzut ekranu 2023-10-20 215020" src="https://github.com/ajarek/next-13-ep08-email-password-next_auth/assets/61388692/23cdc0f7-0e8e-4a4a-8baf-25eadac5027f">
 
 
 *added .env :MONGODB_URI=''
